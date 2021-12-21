@@ -1,10 +1,10 @@
 import fs from 'fs';
 import path from 'path';
-import marked from 'marked';
+import {marked} from 'marked';
 import matter from 'gray-matter';
 import Link from 'next/link';
-import Layout from '../../components/Layout';
-import CategoryLabel from '../../components/CategoryLabel';
+import Layout from '@/components/Layout';
+import CategoryLabel from '@/components/CategoryLabel';
 
 const PostPage = ({frontmatter: {title, category, date, cover_image, author, author_image}, content, slug}) => {
     
@@ -31,8 +31,7 @@ const PostPage = ({frontmatter: {title, category, date, cover_image, author, aut
                 </div>
 
                 <div className='blog-text mt-2'>
-                {/* dangerouslySetInnerHTML={{__html: marked(content)}} */}
-                    <div ></div>
+                    <div dangerouslySetInnerHTML={{__html: marked(content)}}></div>
                 </div>
             </div>
         </Layout>

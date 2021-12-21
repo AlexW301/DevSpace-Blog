@@ -8,7 +8,6 @@ const CategoryLabel = ({children}) => {
         PHP: 'purple',
         Ruby: 'red'
     }
-    console.log(colorKey[children])
 
     return (
         <div className={`px-2 py-1 bg-${colorKey[children]}-600 text-gray-100 font-bold rounded`}>
